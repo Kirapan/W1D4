@@ -1,23 +1,11 @@
 var wrapLog = function (callback, name) {
-
-  if (name === "area") {
-    return function (x,y) {
-      console.log(name + "(" + x + "," + y + ") => " + callback(x,y));
-    };
-
-  }
-  else if (name === "volume") {
-    return function (x,y,z) {
-      console.log(name +"(" + x + "," + y + "," + z + ") => " + callback(x,y,z));
-  };
- }
+  /* your code here */
 };
 
 var area = function (x, y) {
   return x * y;
 };
 var logArea = wrapLog(area, "area");
-
 
 logArea(5, 3); // area(5, 3) => 15
 logArea(3, 2); // area(3, 2) => 6
